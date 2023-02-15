@@ -5,14 +5,15 @@ import Col from "react-bootstrap/Col";
 import { data } from "../helpers/data";
 
 const Card = () => {
+  console.log(data)
   return (
-    <Container className="rounded-5 mt-4" style={{ background: "#96775a" }}>
-      <h1>Language</h1>
+    <Container className="rounded-5 mt-4 p-4" style={{ background: "#96775a" }}>
+      <h1 className="my-3">Language</h1>
       <Row>
         {data.map((lang, index) => {
           return (
-            <Col>
-              <Language {...lang} key={index} />
+            <Col sm={6} md={4} lg={3} key={index}>
+              <Language {...lang} />
             </Col>
           );
         })}
