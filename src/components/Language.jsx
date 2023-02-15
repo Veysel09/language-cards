@@ -8,13 +8,13 @@ const Language = ({ name, img, options }) => {
   return (
     <Container
       style={{ background: "peachpuff" }}
-      className="p-4 rounded-3 h-100"
+      className="p-4 rounded-3 h-100 lang-card"
       onClick={() => setShowImage(!showImage)}
       type="button"
     >
       {showImage && (
         <Container>
-          <Image src={img} width="70%"></Image>
+          <Image className="lang-logo" src={img} width="70%"></Image>
           <h3 className="display-6">{name}</h3>
         </Container>
       )}
